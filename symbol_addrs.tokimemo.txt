@@ -1,0 +1,61 @@
+
+// functions
+
+warm_reset_init = 0x80041000;
+draw_and_disp_env_init = 0x800410ac;
+print_dr_env = 0x800412b4;
+print_di_env = 0x800412c8;
+func_800412dc = 0x800412dc;
+vram_clear = 0x80041328;
+system_init = 0x800414a0;
+prim_init = 0x80041744;
+sprite_init = 0x80041774;
+bg_init = 0x8004180c;
+game_system_init = 0x80041a00;
+_game_work_init_set = 0x80041a38;
+debug_data_init = 0x80041a70;
+game_data_init = 0x80041bbc;
+play_data_init = 0x80041dec;
+girl_data_init = 0x80042108;
+etc_data_init = 0x80042218;
+addr_init_main_rom = 0x80042290;
+add_init_main_dat = 0x80042298;
+main = 0x800422a0;
+_main = 0x80042304;
+func_80042498 = 0x80042498;
+vblank_callback = 0x800425a4;
+myrand = 0x800425d0;
+cold_reset_init = 0x800425e8;
+cashe_f = 0x8004264c;
+vblank_ev_set = 0x8004267c;
+game_main = 0x800426f0;
+step_up = 0x80042948;
+sub_step_up = 0x800429b8;
+sub_sub_step_up = 0x800429fc;
+goto_step = 0x80042a28;
+goto_sub_step = 0x80042ab8;
+goto_sub_sub_step = 0x80042af0;
+check_load_func = 0x80042b10;
+step_display_func = 0x80042ba4;
+PadDataRead = 0x80042c80;
+controller_check = 0x80042d48;
+_pad_data_read_mouse = 0x80042f20;
+MyPadRead = 0x80043280;
+_pad_data_read_pad = 0x80043330;
+konami_command_check = 0x80043688;
+pause_func = 0x80043744;
+vblank_function = 0x80043750;
+draw2d3d = 0x80043ae8;
+back_clear_switch = 0x80043afc;
+load_palette = 0x80043b20;
+
+//.data
+
+konami_command = 0x800ba198;
+konami_command_tag = 0x800ba1e8;
+konami_command_flag = 0x800ba1ec;
+konami_command_timer = 0x800ba1f0;
+
+//.bss
+
+pad2buttons = 0x800ef6e0;

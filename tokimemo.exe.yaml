@@ -1,0 +1,235 @@
+name: tokimemo.exe
+sha1: 2d8d474816e4bf937b09dc3b017f550f7ce4e14b
+options:
+  basename: tokimemo.exe
+  target_path: tokimemo.exe
+  base_path: .
+  platform: psx
+  compiler: GCC
+
+  # asm_path: asm
+  # src_path: src
+  # build_path: build
+  # create_asm_dependencies: True
+
+  ld_script_path: tokimemo.exe.ld
+
+  find_file_boundaries: True
+  gp_value: 0x800f0d90
+
+  o_as_suffix: True
+  use_legacy_include_asm: False
+
+  asm_function_macro: glabel
+  asm_jtbl_label_macro: jlabel
+  asm_data_macro: dlabel
+
+  section_order: [".text", ".rodata", ".data", ".bss"]
+  # auto_all_sections: [".data", ".rodata", ".bss"]
+
+  symbol_addrs_path:
+    - symbol_addrs.tokimemo.txt
+  reloc_addrs_path:
+    - reloc_addrs.txt
+
+  # undefined_funcs_auto_path: undefined_funcs_auto.txt
+  # undefined_syms_auto_path: undefined_syms_auto.txt
+
+  extensions_path: tools/splat_ext
+
+  subalign: 2
+
+  string_encoding: shift_jis
+  data_string_encoding: shift_jis
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - [0x0, header]
+  - [0x80, bin]     # zero padding
+  - name: main
+    type: code
+    start: 0x800
+    vram: 0x80041000
+    # bss_size: Please fill out this value when you figure out the bss size
+    subsegments:
+      - [0x800, asm, main]
+      - [0x2480, asm]
+      - [0x2F50, asm]
+      - [0x4160, asm]
+      - [0x4C00, asm]
+      - [0x60D0, asm]
+      - [0x7090, asm]
+      - [0x8B40, asm]
+      - [0x9B60, asm]
+      - [0xA8D0, asm]
+      - [0xB0F0, asm]
+      - [0xBF50, asm]
+      - [0xF2D0, asm]
+      - [0xF490, asm]
+      - [0x13230, asm]
+      - [0x133E0, asm]
+      - [0x15E70, asm]
+      - [0x15F60, asm]
+      - [0x188A0, asm]
+      - [0x19290, asm]
+      - [0x195A0, asm]
+      - [0x19B00, asm]
+      - [0x21140, asm]
+      - [0x22670, asm]
+      - [0x27760, asm]
+      - [0x2B1A0, asm]
+      - [0x2C3D0, asm]
+      - [0x34BE0, asm]
+      - [0x38270, asm]
+      - [0x393A0, asm]
+      - [0x45850, asm]
+      - [0x461A0, asm]
+      - [0x467B0, asm]
+      - [0x47A60, asm]
+      - [0x47AE0, asm]
+      - [0x47B70, asm]
+      - [0x486D0, asm]
+      - [0x48790, asm]
+      - [0x49100, asm]
+      - [0x4A940, asm]
+      - [0x4A9D0, asm]
+      - [0x4AA30, asm]
+      - [0x4AA50, asm]
+      - [0x4AA90, asm]
+      - [0x4AB10, asm]
+      - [0x4B6E0, asm]
+      - [0x4B790, asm]
+      - [0x4BDF0, asm]
+      - [0x4BF00, asm]
+      - [0x4C000, asm]
+      - [0x4F1D0, asm]
+      - [0x4F570, asm]
+      - [0x4F920, asm]
+      - [0x501E0, asm]
+      - [0x503A0, asm]
+      - [0x50400, asm]
+      - [0x50480, asm]
+      - [0x504A0, asm]
+      - [0x504C0, asm]
+      - [0x505A0, asm]
+      - [0x50880, asm]
+      - [0x50960, asm]
+      - [0x50D70, asm]
+      - [0x511E0, asm]
+      - [0x51210, asm]
+      - [0x513A0, asm]
+      - [0x51970, asm]
+      - [0x51FB0, asm]
+      - [0x542D0, asm]
+      - [0x543C0, asm]
+      - [0x545F0, asm]
+      - [0x54820, asm]
+      - [0x54840, asm]
+      - [0x549E0, asm]
+      - [0x54B10, asm]
+      - [0x54D10, asm]
+      - [0x54E20, asm]
+      - [0x54EA0, asm]
+      - [0x56D80, asm]
+      - [0x56F70, asm]
+      - [0x57E00, asm]
+      - [0x57EC0, asm]
+      - [0x57FD0, asm]
+      - [0x585D0, asm]
+      - [0x58B60, asm]
+      - [0x58C80, asm]
+      - [0x58D20, asm]
+      - [0x58DD0, asm]
+      - [0x58DE0, asm]
+      - [0x58E40, asm]
+      - [0x58E70, asm]
+      - [0x59370, asm]
+      - [0x594F0, asm]
+      - [0x59D30, asm]
+      - [0x5A300, asm]
+      - [0x5A5A0, asm]
+      - [0x5A970, asm]
+      - [0x5ABC0, asm]
+      - [0x5C2B0, asm]
+      - [0x5C360, asm]
+      - [0x5C390, asm]
+      - [0x5C3C0, asm]
+      - [0x5C3D0, asm]
+      - [0x5C970, asm]
+      - [0x5C9A0, asm]
+      - [0x5CAE0, asm]
+      - [0x5CB70, asm]
+      - [0x5D930, asm]
+      - [0x5D9F0, asm]
+      - [0x5E060, asm]
+      - [0x5E130, asm]
+      - [0x5E370, asm]
+      - [0x5F0B0, asm]
+      - [0x5F170, asm]
+      - [0x621A0, asm]
+      - [0x62B20, asm]
+      - [0x62D40, asm]
+      - [0x641A0, asm]
+      - [0x64660, asm]
+      - [0x64780, asm]
+      - [0x64900, asm]
+      - [0x65240, asm]
+      - [0x65C60, asm]
+      - [0x661C0, asm]
+      - [0x66790, asm]
+      - [0x66D40, asm]
+      - [0x681A0, asm]
+      - [0x68840, asm]
+      - [0x68FB0, asm]
+      - [0x6A520, asm]
+      - [0x6AFD0, asm]
+      - [0x6C0B0, asm]
+      - [0x6CCA0, asm]
+      - [0x6D9B0, asm]
+      - [0x6E6C0, asm]
+      - [0x6F540, asm]
+      - [0x70660, asm]
+      - [0x708A0, asm]
+      - [0x70AE0, asm]
+      - [0x70E50, asm]
+      - [0x71580, asm]
+      - [0x71D90, asm]
+      - [0x72CA0, asm]
+      - [0x732C0, asm]
+      - [0x73A00, asm]
+      - [0x73AD0, asm]
+      - [0x73C30, asm]
+      - [0x73F60, asm]
+      - [0x74E50, asm]
+      - [0x74EE0, asm]
+      - [0x74F00, asm]
+      - [0x75100, asm]
+      - [0x75290, rodata]
+      - [0x75730, rodata]
+      - [0x75A50, rodata]
+      - [0x75A70, rodata]
+      - [0x75A90, rodata]
+      - [0x75B10, rodata]
+      - [0x75B30, rodata]
+      - [0x75BB0, rodata]
+      - [0x75BC0, rodata]
+      - [0x75DB0, rodata]
+      - [0x75DD0, rodata]
+      - [0x76EC0, rodata]
+      - [0x77100, rodata]
+      - [0x774B0, rodata]
+      - [0x77550, rodata]
+      - [0x778E0, rodata]
+      - [0x77DF0, rodata]
+      - [0x77FC0, rodata]
+      - [0x78420, rodata]
+      - [0x78460, rodata]
+      - [0x78470, rodata]
+      - [0x78490, rodata]
+      - [0x78940, rodata]
+      - [0x78B20, rodata]
+      - [0x78B40, rodata]
+      - [0x78D90, rodata]
+      - [0x78E90, rodata]
+      - [0x78F10, data]
+  - [0xA8800]
